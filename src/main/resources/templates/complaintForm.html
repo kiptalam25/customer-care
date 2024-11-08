@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>New Complaint</title>
+</head>
+<body>
+<h1>New Complaint</h1>
+<form action="#" th:action="@{/complaints}" th:object="${complaint}" method="post">
+    <label>Title:</label>
+    <input type="text" th:field="*{title}" /><br/>
+
+    <label>Description:</label>
+    <textarea th:field="*{description}"></textarea><br/>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

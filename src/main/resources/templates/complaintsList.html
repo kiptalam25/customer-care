@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Complaints</title>
+</head>
+<body>
+<h1>Complaints</h1>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+    </tr>
+    <tr th:each="complaint : ${complaints}">
+        <td th:text="${complaint.title}"></td>
+        <td th:text="${complaint.description}"></td>
+        <td th:text="${complaint.status}"></td>
+    </tr>
+</table>
+<a href="/complaints/new">New Complaint</a>
+</body>
+</html>
